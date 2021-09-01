@@ -2,10 +2,14 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+    return HttpResponse("Hello, world. You'ré at the polls index.")
+    
+def detail(request, question_id):
+    return HttpResponse("You're looking at question %s." % question_id)
 
-def dave(request):
-    return HttpResponse("this is my own view")
+def results(request, question_id):
+    response = "You're looking at the results of question %s."
+    return HttpResponse(response % question_id)
 
-def newtest(request):
-    return HttpResponse("Last test of routing")
+def vote(request, question_id):
+    return HttpResponse("You're voting on question %s." % question_id)
