@@ -23,3 +23,6 @@ def results(request, question_id):
 
 def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
+
+    # test Pull Request 2
+    
